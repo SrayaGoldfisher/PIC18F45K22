@@ -1,3 +1,7 @@
+//A program that wakes up from sleep mode every half minute, measures two potentiometers, takes the larger value and stores it in EEPROM memory
+//The latest information stored in the EEPROM memory will be displayed on the PORTD
+
+
 char tmp = 0;
 
 void main() {
