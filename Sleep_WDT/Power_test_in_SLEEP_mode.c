@@ -1,3 +1,6 @@
+//A program that checks the low power consumption of the controller during SLEEP mode
+
+
 void main() {
 	TRISB = 0b00000000;
 	TRISA = 0b00100000;
