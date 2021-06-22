@@ -1,3 +1,6 @@
+//A program that puts the controller in reset mode every 1sec using the WDT module in an infinite loop
+
+
 void main() {
 	ANSELD = 0;
 	LATD = 0;
