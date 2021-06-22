@@ -1,0 +1,47 @@
+int ang1=0,ang2=0;
+char dataR;
+void interrupt() {
+     if(INT0F_bit) {
+                   INT0F_bit=0;
+
+                   ang1++;
+                   }
+
+}
+
+
+void main() {
+     TRISB=3;
+     latB=0;
+     TRISA = 0;
+     ANSELB=0;
+     INTCON=0b11010000;//interrupte enable, peie enable, INT0 External Interrupt Enable, clear int0 flag
+     INTEDG0_bit=1;// External 0 Interrupt on rise Edge
+     TRISC=0;
+     latC=0;
+     pwm1_init(5000);
+     pwm1_set_duty(50);
+     pwm2_init(5000);
+     pwm2_set_duty(50);
+     UART1_Init(9600);
+     Delay_us(100);
+     pwm1_stop();
+     pwm2_stop();
+     while(1) {
+              LATA3_bit = 1;
+              if(UART1_Data_Ready()){
+                  ang2=UART1_Read();  //Receive data from UART1
+               while(ang1<ang2) {    //Compare wanted angle to ctual angle
+                             pwm1_start();
+
+                             //motor faword
+              }
+              ang1=0;
+
+
+                   //motor backwrd
+              }
+              pwm1_stop();
+              
+     }
+}
