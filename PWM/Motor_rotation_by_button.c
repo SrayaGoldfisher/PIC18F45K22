@@ -1,3 +1,6 @@
+//A program that rotates the engine to the right or left by pressing a push button
+
+
 sbit push_button at RB5_bit;
 int flag;
 void interrupt () {
@@ -18,13 +21,13 @@ void main () {
      PWM2_Init(5000);
      PWM2_Set_Duty(127);
      while(1) {
-              if(flag) {
-                       PWM1_Stop();
-                       PWM2_Start();
-              }
-              if(!flag) {
-                        PWM2_Stop();
-                        PWM1_Start();
-              }
+         if(flag) {
+             PWM1_Stop();
+             PWM2_Start();
+         }
+         if(!flag) {
+              PWM2_Stop();
+              PWM1_Start();
+         }
      }
 }
