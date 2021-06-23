@@ -1,3 +1,7 @@
+//A program that at the push of a button on the RB4 writes the numbers from 0 to 10 for the first ten addresses of the EEPROM
+//At the push of a button on the RB5, the data from the ten addresses saved in the EEPROM will be displayed
+
+
 char i = 0, Write = 0, Read = 0, flag = 0;
 
 void interrupt() {
