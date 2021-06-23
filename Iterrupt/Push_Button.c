@@ -1,3 +1,7 @@
+//A program that reverses the logical state of RC2 when you press the push-button connected to the RB5 foot
+//The program is executed using PORTB interrupts
+
+
 void interrupt() {
      if (RBIF_bit) {
         if(RB5_bit){
