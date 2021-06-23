@@ -1,3 +1,6 @@
+//A program that records analog values from a potentiometer and stores them in the EEPROM memory
+
+
 void main() {
      ANSELB = 0xFF;
      ANSELC = ANSELD = 0;
@@ -8,7 +11,7 @@ void main() {
      ADC_Init();
 
      while(1) {
-              PORTC = 0xFF;							//LED indication
+         PORTC = 0xFF;							//LED indication
               Delay_ms(1000);
               PORTC = 0x00;
               Delay_ms(1000);
