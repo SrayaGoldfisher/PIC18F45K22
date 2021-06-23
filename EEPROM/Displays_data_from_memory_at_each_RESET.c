@@ -1,3 +1,6 @@
+//A program that takes the latest data stored in the EEPROM memory and displays it in each RESET on PORTD for 3 seconds
+
+
 void main() {
      ANSELB = 0xFF;
      ANSELC = ANSELD = 0;
