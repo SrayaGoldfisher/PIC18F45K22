@@ -1,3 +1,8 @@
+//A program that sends data to a microcontroller via serial communication
+//The data will be stored in the EEPROM memory
+//The data will be stored each time in a different memory cell
+
+
 char i = 0;
 
 void main() {
