@@ -1,3 +1,9 @@
+//Program that generates 80% DC PWM signal
+//(80% of duty cycle on high and 20% of duty cycle on low)
+//The signal has a frequency of 5kHz on the 5 leg of port B
+//The program is executed using interrupts without the use of library functions
+
+
 sbit output at RB5_bit;
 int cnt = 0;
 
