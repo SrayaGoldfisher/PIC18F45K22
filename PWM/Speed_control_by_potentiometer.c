@@ -1,11 +1,14 @@
-int ppp;
+//A program that controls the speed of the motor using a potentiometer
+
+
+int tmp;
 
 void main() {
-     TRISA =255;
+     TRISA = 255;
      TRISB = 0b00000001;
-     ANSELA =255;
-     TRISC=0;
-     ANSELC=0;
+     ANSELA = 255;
+     TRISC = 0;
+     ANSELC = 0;
      ADC_Init();
      UART1_Init(9600);
      delay_ms(10);
@@ -13,8 +16,8 @@ void main() {
      delay_ms(10);
      PWM2_Start();
      while(1) {
-              ppp = ADC_Read(0)>>2;
-              UART1_Write(PPP);
-              PWM2_Set_Duty(ppp);
+              tmp = ADC_Read(0) >> 2;
+              UART1_Write(tmp);
+              PWM2_Set_Duty(tmp);
      }
 }
