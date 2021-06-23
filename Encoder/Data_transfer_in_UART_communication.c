@@ -1,5 +1,6 @@
 //A program that transmits the data to the terminal via serial communication - UART
 
+int tmp;
 
 void interrupt() {
      if(TMR0IF_bit) {
