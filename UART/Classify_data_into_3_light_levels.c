@@ -1,3 +1,8 @@
+//Program for receiving analog information from an LDR sensor
+//The data from the sensor is sent via UART serial communication to the compiler / forteus terminal screen
+//The terminal screen will display 3 possible light levels (very bright, medium, very dark)
+
+
 int tmp;
 
 void main() {
