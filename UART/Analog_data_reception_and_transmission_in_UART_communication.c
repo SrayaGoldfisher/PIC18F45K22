@@ -1,3 +1,7 @@
+//Program for receiving analog information from an LDR sensor
+//The data from the sensor is sent via UART serial communication to the compiler / proteus terminal screen
+
+
 int tmp;
 
 void main() {
