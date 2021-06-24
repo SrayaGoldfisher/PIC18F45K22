@@ -1,3 +1,9 @@
+//A program that presses a push-button in RC0 performs an analog reading from a potentiometer in AN1
+//The data is converted to digital and displayed in PORTB (without LSB)
+//When a presses a push-button in RC1, an analog reading is performed from an LDR sensor in AN2
+//The data is converted to digital and displayed in PORTD
+
+
 int flag1, flag2;
 void main() {
      PORTA = PORTB = PORTC = PORTD = 0;
