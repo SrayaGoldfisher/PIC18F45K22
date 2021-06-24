@@ -1,3 +1,7 @@
+//A program that turns on a LED when it's dark outside
+//The analog reading is performed using an LDR sensor
+
+
 unsigned tmp;
 sbit LED at RB0_bit;
 
@@ -7,6 +11,7 @@ void main() {
      TRISB = 0;
      ANSELB = 0;
      ANSELA = 255;
+     
      while(1) {
               ADC_Init();
               tmp = ADC_Read(1);
