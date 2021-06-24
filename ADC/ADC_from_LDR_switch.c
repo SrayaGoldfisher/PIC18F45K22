@@ -1,3 +1,9 @@
+//A program that activates a switch in RC0 performs an analog reading from a potentiometer in AN1
+//The data is converted to digital and displayed in PORTB (without LSB)
+//When a switch is activated in RC1, an analog reading is performed from an LDR sensor in AN2
+//The data is converted to digital and displayed in PORTD
+
+
 void main() {
      PORTA = PORTB = PORTC = PORTD = 0;
      TRISA = TRISC = 0xFF;
