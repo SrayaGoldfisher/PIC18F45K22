@@ -1,3 +1,8 @@
+//A program that receives data from a potentiometer in AN1, converts the data into digital
+//If the digital voltage is greater than VDD/2, a LED will turn on at RB0
+//If the digital voltage is lower than VDD/2, a LED will turn on at RB1
+
+
 void main() {
      PORTA = PORTB = 0;
      TRISA = 0xFF;
